@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                        http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="person" class="com.slt.spring.javaeeBook.model.Person" lazy-init="true">
+        <property name="name" value="沙龙腾"></property>
+        <property name="sex" value="男"></property>
+<!--        <constructor-arg value="888"/>-->
+<!--        <constructor-arg value="666" />-->
+
+    </bean>
+
+    <bean class="com.slt.spring.Event.DemoEventListener" />
+    <bean class="com.slt.spring.Event.DemoEventListener2" />
+
+</beans>
