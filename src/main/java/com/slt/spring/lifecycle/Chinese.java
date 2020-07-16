@@ -2,6 +2,7 @@ package com.slt.spring.lifecycle;
 
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanNameAware;
+import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 import org.springframework.context.ApplicationContext;
@@ -13,7 +14,8 @@ import org.springframework.context.ApplicationContextAware;
 　* @author shalongteng
 　* @date 2020/7/10 10:56
 　*/
-public class Chinese implements InitializingBean , BeanNameAware, ApplicationContextAware , BeanPostProcessor {
+public class Chinese implements InitializingBean , BeanNameAware, ApplicationContextAware ,
+        BeanPostProcessor, DisposableBean {
     @Override
     public void setBeanName(String s) {
         System.out.println ("===setBeanName===") ;
@@ -35,5 +37,10 @@ public class Chinese implements InitializingBean , BeanNameAware, ApplicationCon
 
     public void init(){
         System.out.println("制作执行初始化方法 init");
+    }
+
+    @Override
+    public void destroy() throws Exception {
+
     }
 }

@@ -1,4 +1,4 @@
-package com.slt.spring.container;
+package com.slt.spring.IOC;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
